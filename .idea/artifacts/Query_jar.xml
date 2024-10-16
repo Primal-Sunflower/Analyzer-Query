@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="Query:jar">
+    <output-path>$PROJECT_DIR$/out</output-path>
+    <root id="root">
+      <element id="archive" name="Query.jar">
+        <element id="module-output" name="QVoG-Query" />
+      </element>
+    </root>
+  </artifact>
+</component>
