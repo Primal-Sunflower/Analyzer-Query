@@ -1,5 +1,13 @@
 package cn.edu.query.qvog.query.arkts.CWE.CWE_022;
 
+import cn.edu.engine.qvog.engine.core.graph.values.statements.IfStatement;
+import cn.edu.engine.qvog.engine.dsl.fluent.query.CompleteQuery;
+import cn.edu.engine.qvog.engine.dsl.fluent.query.QueryDescriptor;
+import cn.edu.engine.qvog.engine.dsl.lib.engine.QueryEngine;
+import cn.edu.engine.qvog.engine.dsl.lib.flow.TaintFlowPredicate;
+import cn.edu.engine.qvog.engine.language.arkts.ArkTSQuery;
+import cn.edu.engine.qvog.engine.language.arkts.lib.predicate.ContainsFunctionCall;
+
 public class TaintedPath extends ArkTSQuery {
     public static void main(String[] args) {
         QueryEngine.getInstance().execute(new cn.edu.query.qvog.query.arkts.CWE.CWE_022.TaintedPath()).close();
