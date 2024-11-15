@@ -30,7 +30,7 @@ public class FlaskDebug extends ArkTSQuery {
     @Override
     public CompleteQuery run() {
         return QueryDescriptor.open()
-                .from("router.push", new ContainsFunctionCall("router.push"), "router.push")
+                .from("router.push", new ContainsFunctionCall("router.pushUrl"), "router.pushUrl")
                 .whereP(new ContainsFunctionCall(
                         call -> call.getArguments().stream().anyMatch(
                                 arg -> arg instanceof NamedExpression expression &&

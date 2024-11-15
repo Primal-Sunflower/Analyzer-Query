@@ -29,7 +29,7 @@ public class CodeInjection extends ArkTSQuery{
     @Override
     public CompleteQuery run() {
         return QueryDescriptor.open()
-                .from("input", new ContainsFunctionCall("router.getQueryParameter"), "router.getQueryParameter")
+                .from("input", new ContainsFunctionCall("router.getParams"), "router.getParams")
                 .fromP("exec", new ContainsFunctionCall("eval").or(new ContainsFunctionCall("Function")))
                 .where(TaintFlowPredicate.with()
                         .source("input")
