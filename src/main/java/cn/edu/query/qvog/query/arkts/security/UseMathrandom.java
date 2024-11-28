@@ -10,6 +10,7 @@ import cn.edu.engine.qvog.engine.language.arkts.lib.predicate.ContainsFunctionCa
 import cn.edu.query.qvog.query.arkts.ts_eslint.ObjectNotCheckNull;
 import cn.edu.query.qvog.query.cxx.misuse.CxxQueryHelper;
 
+
 public class UseMathrandom extends ArkTSQuery {
     public static void main(String[] args) {
         QueryEngine.getInstance()

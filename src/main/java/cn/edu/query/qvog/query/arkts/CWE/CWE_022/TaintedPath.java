@@ -19,6 +19,14 @@ struct Index {
   @State path: string = "";
 
   private operateFiles() {
+
+  // 不写这个if就是含有漏洞
+    if(!this.path || this.path.includes("..") || this.path.startsWith("/")) {
+      console.error("路径不合法");
+      return;
+    }
+
+
     let file = fs.openSync(this.path + "/111.txt", fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
     fs.writeSync(file.fd, "你好");
     let arrayBuffer = new ArrayBuffer(1024);
@@ -48,8 +56,6 @@ struct Index {
 
 
  */
-
-
 
 
 public class TaintedPath extends ArkTSQuery {
